@@ -1,11 +1,10 @@
 import { DataSource } from 'typeorm';
-import { config } from 'dotenv';
 import { ConfigService } from '@nestjs/config';
 import { User } from 'src/entities/user.entity';
+import { config } from 'dotenv';
 config();
 
 const configService = new ConfigService();
-
 
 const AppDataSource = new DataSource({
     type: 'postgres',
