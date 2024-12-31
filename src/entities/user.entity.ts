@@ -4,12 +4,21 @@ import { BaseEntity } from './base.entity';
 
 @Entity()
 export class User extends BaseEntity {
-    @Column()
+    @Column({ nullable: true })
     firstName: string;
 
-    @Column()
+    @Column({ nullable: true })
     lastName: string;
+
+    @Column({ nullable: true })
+    age: number;
 
     @Column({ default: true })
     isActive: boolean;
+
+    @Column({ default: true })
+    isAdmin: boolean;
+
+    @Column({ default: true })
+    address: boolean;
 }

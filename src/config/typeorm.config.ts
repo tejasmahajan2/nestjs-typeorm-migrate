@@ -16,9 +16,11 @@ const AppDataSource = new DataSource({
     database: 'test',
     synchronize: false,
     entities: [User],
-    migrations: ['src/database/migrations/*-migration.ts'],
-    migrationsRun: false,
-    logging: true,
+    // migrations: ['src/database/migrations/*-migration.ts'],
+    // entities: [__dirname + '/../**/*.entity.{js,ts}'],
+    migrations: [__dirname + '/../database/migrations/*.{js,ts}'],
+    migrationsRun: true,
+    // logging: true,
 });
 
 export default AppDataSource;
